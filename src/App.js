@@ -14,6 +14,7 @@ import { fetchCampsites } from './features/campsites/campsitesSlice';
 function App() {
 
   const dispatch = useDispatch();
+  
   useEffect(() => {
     dispatch(fetchCampsites());
   }, [dispatch]);

@@ -12,7 +12,7 @@ const initialState = {
 export const fetchCampsites = createAsyncThunk('campsites/fetchCampsites',
     async () => {
         const response = await fetch(baseUrl + 'campsites');
-        if(!response.ok){
+        if (!response.ok) {
             return Promise.reject('Unable to fetch, status: ' + response.status);
         }
         const data = response.json();
